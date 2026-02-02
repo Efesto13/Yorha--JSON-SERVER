@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "f60d",
+      "name": "2b",
+      "password": "123",
+      "post": [],
+      "type": "admin",
+      "posts": []
+    },
+    {
+      "id": "2639",
+      "name": "samuel",
+      "password": "123",
+      "post": [],
+      "type": "user",
+      "posts": [
+        {
+          "id": 1770049881716,
+          "unit": "Botero",
+          "model": "Scanner",
+          "mission": "mangel\n"
+        }
+      ]
+    }
+  ]
+}

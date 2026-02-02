@@ -1,0 +1,34 @@
+:root {
+    --yorha-bg: #0f0f0f;
+    --yorha-panel: #181818;
+    --yorha-border: #3a3a3a;
+    --yorha-text: #e5e5e5;
+    --yorha-muted: #9ca3af;
+    --yorha-accent: #c7c7c7;
+}
+
+body {
+    background-color: var(--yorha-bg);
+    color: var(--yorha-text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.yorha-panel {
+    background-color: var(--yorha-panel);
+    border: 1px solid var(--yorha-border);
+}
+
+.yorha-input {
+    background-color: transparent;
+    border: 1px solid var(--yorha-border);
+    color: var(--yorha-text);
+}
+
+.yorha-input::placeholder {
+    color: var(--yorha-muted);
+}
+
+.yorha-input:focus {
+    outline: none;
+    border-color: var(--yorha-accent);
+}

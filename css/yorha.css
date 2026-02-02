@@ -1,0 +1,90 @@
+:root {
+    /* Colors */
+    --bg-main: #0f0f0f;
+    --bg-card: #171717;
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    --border-main: #cfcfcf;
+    --border-input: #aaa;
+    --border-focus: #ffffff;
+
+    /* Effects */
+    --shadow-soft: 0 0 20px rgba(255, 255, 255, 0.05);
+
+    /* Typography */
+    --font-main: 'Orbitron', monospace;
+    --letter-wide: 2px;
+    --letter-xwide: 4px;
+}
+
+/* ===== General ===== */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-main);
+}
+
+/* ===== Card ===== */
+.yorha-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-main);
+    border-radius: 0;
+    box-shadow: var(--shadow-soft);
+}
+
+/* ===== Titles ===== */
+.yorha-title {
+    color: var(--text-main);
+    font-size: 22px;
+    letter-spacing: var(--letter-xwide);
+}
+
+.yorha-subtitle {
+    color: var(--text-main);
+    font-size: 12px;
+    letter-spacing: var(--letter-wide);
+    opacity: 0.7;
+}
+
+/* ===== Inputs ===== */
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-input);
+    border-radius: 0;
+    color: var(--text-main);
+}
+
+.form-control:focus {
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border-focus);
+    color: var(--border-focus);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* ===== Button ===== */
+.btn-yorha {
+    border: 1px solid var(--text-main);
+    background: transparent;
+    color: var(--text-main);
+    letter-spacing: var(--letter-wide);
+    border-radius: 0;
+    transition: 0.3s ease;
+}
+
+.btn-yorha:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+/* ===== Footer ===== */
+.yorha-footer {
+    font-size: 10px;
+    letter-spacing: var(--letter-wide);
+    color: var(--text-main);
+    opacity: 0.6;
+}

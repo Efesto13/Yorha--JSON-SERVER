@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>YoRHa Command Interface</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+
+<body id="app" class="min-h-screen flex flex-col items-center justify-center gap-10 p-6">
+
+    <!-- FORMULARIO -->
+    <form
+        id="yorha-form"
+        class="yorha-panel w-full max-w-md p-8 rounded-2xl shadow-lg space-y-6"
+    >
+
+        <header id="form-header" class="space-y-2">
+            <h1 id="form-title" class="text-2xl font-semibold tracking-widest uppercase">
+                YoRHa Command
+            </h1>
+
+            <p id="form-description" class="text-sm text-gray-400 leading-relaxed">
+                Glory to mankind.  
+                Register your android unit for deployment against machine lifeforms.
+            </p>
+        </header>
+
+        <section id="inputs-section" class="space-y-4">
+
+            <div id="unit-field">
+                <label for="unit-input" class="text-xs uppercase tracking-wider text-gray-400">
+                    Unit Designation
+                </label>
+                <input
+                    id="unit-input"
+                    name="unit"
+                    type="text"
+                    placeholder="e.g. 2B, 9S"
+                    class="yorha-input w-full mt-1 px-3 py-2 rounded-lg"
+                >
+            </div>
+
+            <div id="model-field">
+                <label for="model-input" class="text-xs uppercase tracking-wider text-gray-400">
+                    Model Type
+                </label>
+                <input
+                    id="model-input"
+                    name="model"
+                    type="text"
+                    placeholder="Battle / Scanner / Operator"
+                    class="yorha-input w-full mt-1 px-3 py-2 rounded-lg"
+                >
+            </div>
+
+            <div id="mission-field">
+                <label for="mission-input" class="text-xs uppercase tracking-wider text-gray-400">
+                    Mission Description
+                </label>
+                <textarea
+                    id="mission-input"
+                    name="mission"
+                    rows="4"
+                    placeholder="Describe assigned mission parameters..."
+                    class="yorha-input w-full mt-1 px-3 py-2 rounded-lg resize-none"
+                ></textarea>
+            </div>
+
+        </section>
+
+        <p id="form-message" class="text-sm text-center text-gray-400 hidden"></p>
+
+        <div id="actions-section" class="space-y-3">
+            <button
+                id="submit-button"
+                type="submit"
+                class="w-full py-2 rounded-lg border border-gray-500 uppercase tracking-widest text-sm hover:bg-gray-800 transition"
+            >
+                Submit to Command
+            </button>
+        </div>
+
+    </form>
+
+    <!-- PANEL DE INFORMACIÓN -->
+    <section
+        id="data-section"
+        class="yorha-panel w-full max-w-3xl p-6 rounded-2xl shadow-lg"
+    >
+
+        <header class="mb-4">
+            <h2
+                id="data-title"
+                class="text-lg font-semibold tracking-widest uppercase"
+            >
+                Registered Units
+            </h2>
+
+            <p
+                id="data-description"
+                class="text-sm text-gray-400"
+            >
+                Active YoRHa units stored in the bunker database.
+            </p>
+        </header>
+
+        <!-- CONTENEDOR DINÁMICO -->
+        <div
+            id="data-container"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
+            <!-- JS RENDERIZA AQUÍ -->
+        </div>
+
+        <!-- MENSAJE VACÍO -->
+        <p
+            id="empty-message"
+            class="text-center text-sm text-gray-500 mt-6 hidden"
+        >
+            No units registered.
+        </p>
+
+    </section>
+
+    <!-- JS -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
